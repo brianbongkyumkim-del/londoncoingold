@@ -57,26 +57,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
-            The sovereign, gold-anchored settlement reserve and liquidity routing hub powering all decentralized projects on the <strong className="text-emerald-400 font-semibold">OMNEX Mainnet</strong>.
+          <p className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto font-normal leading-relaxed mb-4">
+            LondonCoinGold is built on <strong className="text-amber-300 font-semibold">perpetually accumulating physical gold</strong>, funded by enterprise profits from <strong className="text-white">GLBX, BLC, KSB, FLY, FSC, MSA, MILK, and ASA</strong> on the OMNEX Mainnet.
+          </p>
+
+          <p className="text-sm sm:text-base text-amber-200/90 font-medium max-w-2xl mx-auto mb-8 bg-amber-500/10 py-2 px-4 rounded-xl border border-amber-500/30">
+            All accumulated physical gold <strong className="text-white underline decoration-amber-400">belongs 100% to the holders of LDXG</strong> and will be <strong className="text-white">accumulated forever</strong>.
           </p>
 
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold mb-14">
             <a
-              href="#network-diagram"
+              href="#perpetual-gold"
               className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-slate-950 font-bold hover:brightness-110 transition-all shadow-xl shadow-amber-500/20 flex items-center gap-2"
             >
-              <span>Explore Ecosystem Map</span>
+              <Coins className="w-4 h-4" />
+              <span>Perpetual Gold Engine</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
             <a
-              href="#liquidity-bridge"
+              href="#holders-ownership"
               className="px-6 py-3.5 rounded-xl bg-[#0e1422] hover:bg-[#151e33] text-amber-300 border border-amber-500/30 transition-all flex items-center gap-2"
             >
-              <ArrowRightLeft className="w-4 h-4 text-amber-400" />
-              <span>Cross-Project Swap</span>
+              <ShieldCheck className="w-4 h-4 text-amber-400" />
+              <span>10% Sovereign Allocation</span>
+            </a>
+
+            <a
+              href="#network-diagram"
+              className="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition-all flex items-center gap-2"
+            >
+              <Layers className="w-4 h-4 text-slate-400" />
+              <span>Ecosystem Map</span>
             </a>
 
             <button
@@ -84,50 +97,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition-all flex items-center gap-2"
             >
               <FileText className="w-4 h-4 text-slate-400" />
-              <span>Whitepaper & Specs</span>
+              <span>Whitepaper</span>
             </button>
           </div>
 
           {/* Key Metric Highlights Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {/* Stat 1 */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-amber-500/20 backdrop-blur-sm">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-amber-500/30 backdrop-blur-sm">
               <div className="flex items-center justify-center gap-1.5 text-xs text-amber-400 font-mono mb-1">
                 <Coins className="w-4 h-4 text-amber-400" />
-                <span>GOLD PEG RATIO</span>
+                <span>GOLD PER TOKEN</span>
               </div>
-              <div className="text-xl sm:text-2xl font-black text-white">1.00g</div>
-              <div className="text-[11px] text-slate-400 mt-1">LBMA 999.9 Fine Gold</div>
+              <div className="text-xl sm:text-2xl font-black text-amber-300">1.308g+</div>
+              <div className="text-[11px] text-slate-400 mt-1">Accumulated Forever</div>
             </div>
 
             {/* Stat 2 */}
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-emerald-500/20 backdrop-blur-sm">
               <div className="flex items-center justify-center gap-1.5 text-xs text-emerald-400 font-mono mb-1">
                 <Layers className="w-4 h-4 text-emerald-400" />
-                <span>CONNECTED CHAINS</span>
+                <span>PROFIT FEEDERS</span>
               </div>
               <div className="text-xl sm:text-2xl font-black text-white">8 Projects</div>
-              <div className="text-[11px] text-slate-400 mt-1">GLBX, FLY, MILK, BLC...</div>
+              <div className="text-[11px] text-slate-400 mt-1">GLBX, BLC, KSB, FLY...</div>
             </div>
 
             {/* Stat 3 */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-amber-500/20 backdrop-blur-sm">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-amber-500/30 backdrop-blur-sm">
               <div className="flex items-center justify-center gap-1.5 text-xs text-amber-400 font-mono mb-1">
                 <ShieldCheck className="w-4 h-4 text-amber-400" />
-                <span>TOTAL RESERVE VALUE</span>
+                <span>VAULTED PHYSICAL GOLD</span>
               </div>
-              <div className="text-xl sm:text-2xl font-black text-white">{OMNEX_NETWORK_INFO.totalReserveValueUsd}</div>
-              <div className="text-[11px] text-slate-400 mt-1">100% On-Chain Proof (PoR)</div>
+              <div className="text-xl sm:text-2xl font-black text-white">84,120 kg</div>
+              <div className="text-[11px] text-emerald-400 mt-1">$6.34B USD in LBMA Vaults</div>
             </div>
 
             {/* Stat 4 */}
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0c101a]/80 border border-emerald-500/20 backdrop-blur-sm">
               <div className="flex items-center justify-center gap-1.5 text-xs text-emerald-400 font-mono mb-1">
                 <Zap className="w-4 h-4 text-emerald-400" />
-                <span>OMNEX SPEED</span>
+                <span>HOLDER OWNERSHIP</span>
               </div>
-              <div className="text-xl sm:text-2xl font-black text-white">0.85s</div>
-              <div className="text-[11px] text-slate-400 mt-1">{OMNEX_NETWORK_INFO.tpsLive.toLocaleString()} TPS Live</div>
+              <div className="text-xl sm:text-2xl font-black text-emerald-400">100%</div>
+              <div className="text-[11px] text-slate-400 mt-1">Deeded to LDXG Holders</div>
             </div>
           </div>
         </div>

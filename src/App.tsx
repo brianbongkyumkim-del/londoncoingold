@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
+import { PerpetualGoldAccumulationSection } from './components/PerpetualGoldAccumulationSection';
 import { InteractiveEcosystemMap } from './components/InteractiveEcosystemMap';
 import { OmnexMainnetSection } from './components/OmnexMainnetSection';
 import { LiquidityBridgeSimulator } from './components/LiquidityBridgeSimulator';
@@ -82,7 +83,10 @@ export default function App() {
           onOpenDeveloperModal={() => setIsDeveloperModalOpen(true)}
         />
 
-        {/* 2. Official Topology Diagram faithfully recreating page 1 of document */}
+        {/* 2. Perpetual Gold Accumulation Protocol: Profits from 8 projects accumulated forever */}
+        <PerpetualGoldAccumulationSection />
+
+        {/* 3. Official Topology Diagram faithfully recreating page 1 of document */}
         <InteractiveEcosystemMap
           onSelectProject={(proj) => setSelectedProject(proj)}
           onOpenSwap={handleOpenSwap}

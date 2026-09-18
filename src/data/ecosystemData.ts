@@ -12,11 +12,20 @@ export const OMNEX_NETWORK_INFO = {
   ldxgCirculatingSupply: '64,280,000 LDXG',
   ldxgTotalSupply: '100,000,000 LDXG',
   ldxgPriceUsd: 74.85,
-  ldxgGoldBackingGramsPerToken: '1.00g (LBMA Fine Gold)',
-  totalReserveValueUsd: '$4.81 Billion USD',
+  ldxgGoldBackingGramsPerToken: '1.00g Base + Perpetual Accumulation Growth',
+  totalGoldAccumulatedKg: '84,120 kg (2,704,530 Fine Troy Oz)',
+  totalReserveValueUsd: '$6.34 Billion USD',
   averageGasFeeUsd: '$0.00028',
   finalityTime: '1.2 seconds',
   mainnetExplorerUrl: 'https://explorer.omnex.network',
+  goldAccumulationEngine: {
+    status: 'ACTIVE_PERPETUAL',
+    alliedProfitProjects: ['GLBX', 'BLC', 'KSB', 'FLY', 'FSC', 'MSA', 'MILK', 'ASA'],
+    ownershipModel: '100% Owned by LDXG Holders Forever',
+    accumulatedForeverGuarantee: 'Perpetual non-dilutive physical gold bullion custody in LBMA-certified vaults in London, Zurich, and Singapore.',
+    annualGoldInflowEstKg: 12450,
+    annualGoldInflowEstUsd: '$932,000,000 USD',
+  },
 };
 
 export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
@@ -99,6 +108,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total BLC supply (500,000,000 BLC) based on the amount of LDXG owned (5 BLC per 1 LDXG).',
       whitepaperRef: 'Advanced Bitcoin Forking Project (BLC) White Paper (Feb 2025)',
     },
+    goldProfitContribution: {
+      profitSource: 'PoUW AI Compute Marketplace & Neural Task Execution Fees',
+      mechanism: '20% of net compute revenue automatically converts to LBMA gold bars via London vault contracts.',
+      annualEstUsd: '$38,200,000 USD',
+      quarterlyGoldGramsEst: '127,500g Fine Gold',
+    },
     keyFeatures: [
       'Proof-of-Useful-Work (PoUW) replacing wasteful PoW mining',
       'Decentralized AI task marketplace with zk-SNARK verification',
@@ -143,6 +158,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total MILK supply (500,000,000 MILK) in direct proportion to their LDXG balance (5 MILK per 1 LDXG).',
       whitepaperRef: 'FirstPureFerma White-Paper v1.0 (Oct 2025)',
     },
+    goldProfitContribution: {
+      profitSource: 'Precision Fermentation Industrial Reactor Output & Global FOB Protein Deliveries',
+      mechanism: '25% of commercial dairy protein net profits allocated directly to physical fine gold purchases.',
+      annualEstUsd: '$24,500,000 USD',
+      quarterlyGoldGramsEst: '81,800g Fine Gold',
+    },
     keyFeatures: [
       '1 MILK = 1 L FOB factory freeze-and-ship milk protein',
       'Real-time reactor telemetry (temperature, pH, titer) to on-chain oracle',
@@ -186,6 +207,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       valuePer1000LdxgUsd: 43000,
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total ASA supply (500,000,000 ASA) based on their LDXG holding ratio (5 ASA per 1 LDXG).',
       whitepaperRef: 'AISA Health Screening Platform White Paper v1.0 (Oct 2025)',
+    },
+    goldProfitContribution: {
+      profitSource: 'MEMS Sensor Array Cancer Screening Diagnostics & Hospital SaaS Licensing',
+      mechanism: '25% of clinic screening kit royalties and institutional health checks stream into perpetual gold acquisition.',
+      annualEstUsd: '$52,800,000 USD',
+      quarterlyGoldGramsEst: '176,300g Fine Gold',
     },
     keyFeatures: [
       '95% detection accuracy validated in 5,000-patient clinical trials',
@@ -232,6 +259,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total 10 Billion KBL supply (1,000,000,000 KBL) based on their LDXG holdings (10 KBL per 1 LDXG).',
       whitepaperRef: 'KeystoneBlue Tokenization White Paper v1.0 (Oct 2025)',
     },
+    goldProfitContribution: {
+      profitSource: 'Serialized Multi-Asset Real Estate & Securities Trading Pool Spreads',
+      mechanism: '30% of global institutional exchange spreads and custody fees purchase physical LBMA gold.',
+      annualEstUsd: '$84,600,000 USD',
+      quarterlyGoldGramsEst: '282,500g Fine Gold',
+    },
     keyFeatures: [
       'Serialized asset database tracking unique identifiers in trusted custody',
       '0.001% trading fee (600× cheaper than traditional crypto exchanges)',
@@ -275,6 +308,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       valuePer1000LdxgUsd: 72950,
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total FirstCoin (FSC) token supply (500,000,000 FSC) based on their LDXG balance (5 FSC per 1 LDXG).',
       whitepaperRef: 'FirstSemiCon Enhanced Business Plan (Jan 2025)',
+    },
+    goldProfitContribution: {
+      profitSource: 'Optical Chipset Hardware Sales & Photonic Logic Gate Licensing',
+      mechanism: '25% of commercial enterprise hardware gross margins systematically buy and vault physical gold.',
+      annualEstUsd: '$61,400,000 USD',
+      quarterlyGoldGramsEst: '205,000g Fine Gold',
     },
     keyFeatures: [
       'Photonic speed operations at light speed (3×10⁸ m/s) with zero electronic switching losses',
@@ -321,6 +360,12 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total FlySafe token supply (500,000,000 FLY/SAFE) based on the amount of LDXG owned (5 FLY per 1 LDXG).',
       whitepaperRef: 'FlySafe Decentralized Travel Insurance White Paper v1.0 (Oct 2025)',
     },
+    goldProfitContribution: {
+      profitSource: 'Global Aviation Parametric Delay Policies & Reinsurance Reserves',
+      mechanism: '20% of autonomous travel insurance underwriting margins directly fund LBMA gold ingot purchases.',
+      annualEstUsd: '$19,800,000 USD',
+      quarterlyGoldGramsEst: '66,100g Fine Gold',
+    },
     keyFeatures: [
       '15-minute automated claim settlements via flight radar APIs',
       'Policy NFTs representing unique transferable insurance contracts',
@@ -331,9 +376,10 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
     website: 'https://flysafe.travel',
   },
   {
-    id: 'mesocialize',
-    name: 'MeSocialize (MSZ)',
-    tokenSymbol: 'MSZ',
+    id: 'msa',
+    name: 'MeSocialize (MSA)',
+    tokenSymbol: 'MSA',
+    subTokenSymbols: ['MSA', 'MSZ'],
     sector: 'social',
     sectorLabel: 'AI Influencer SNS & Creator Economy',
     tagline: 'Influencer-focused SNS with photo-realistic AI avatars & 700M follower commercial platform.',
@@ -349,7 +395,7 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       priceInLdxg: 0.021,
       priceUsd: 1.57,
       ldxgPoolLiquidity: '4.1M LDXG ($306M)',
-      circulatingSupply: '1,800,000,000 MSZ',
+      circulatingSupply: '1,800,000,000 MSA',
       volume24h: '$24.9M USD',
       tpsPeak: 8900,
       holders: 142000,
@@ -359,11 +405,17 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
     ldxgRole: 'Universal tip settlement and creator savings vault offering inflation-proof gold yields.',
     tenPercentAllocation: {
       percentage: 10,
-      totalAllocatedTokens: '500,000,000 MSZ',
+      totalAllocatedTokens: '500,000,000 MSA',
       ratioPerLdxg: 5.0,
       valuePer1000LdxgUsd: 7850,
-      entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total MeSocialize supply (500,000,000 MSZ) pro-rata based on their LDXG holdings (5 MSZ per 1 LDXG).',
+      entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total MeSocialize supply (500,000,000 MSA) pro-rata based on their LDXG holdings (5 MSA per 1 LDXG).',
       whitepaperRef: 'MeSocialize Business Plan & LondonCoin Systems MOU',
+    },
+    goldProfitContribution: {
+      profitSource: 'AI Avatar Live Commerce, Virtual Gifting & Social Gateway Fees',
+      mechanism: '20% of creator monetization platform profits systematically acquire and store LBMA gold.',
+      annualEstUsd: '$31,500,000 USD',
+      quarterlyGoldGramsEst: '105,200g Fine Gold',
     },
     keyFeatures: [
       'Photo-realistic AI avatars with emotion synthesis and real-time web crawl data',
@@ -376,9 +428,9 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
   },
   {
     id: 'glbx',
-    name: 'GLBX (LDXT / LDXU)',
-    tokenSymbol: 'LDXT',
-    subTokenSymbols: ['LDXT', 'LDXU'],
+    name: 'GLBX (GLBX / LDXT / LDXU)',
+    tokenSymbol: 'GLBX',
+    subTokenSymbols: ['GLBX', 'LDXT', 'LDXU'],
     sector: 'exchange',
     sectorLabel: 'Institutional Exchange & Trading Engine',
     tagline: 'Global institutional digital asset exchange with dual-token liquidity architecture.',
@@ -394,7 +446,7 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
       priceInLdxg: 0.145,
       priceUsd: 10.85,
       ldxgPoolLiquidity: '8.4M LDXG ($628M)',
-      circulatingSupply: '1,200,000,000 LDXT',
+      circulatingSupply: '1,200,000,000 GLBX',
       volume24h: '$42.8M USD',
       tpsPeak: 4200,
       holders: 34200,
@@ -404,11 +456,17 @@ export const ECOSYSTEM_PROJECTS: EcosystemProject[] = [
     ldxgRole: 'Settles all high-frequency cross-border order book fills and acts as the risk-free collateral asset for leveraged trades.',
     tenPercentAllocation: {
       percentage: 10,
-      totalAllocatedTokens: '500,000,000 LDXT',
+      totalAllocatedTokens: '500,000,000 GLBX',
       ratioPerLdxg: 5.0,
       valuePer1000LdxgUsd: 54250,
-      entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total GLBX governance supply (500,000,000 LDXT) based on their LDXG balance (5 LDXT per 1 LDXG).',
+      entitlementClause: 'LondonCoinGold (LDXG) holders own 10% of total GLBX governance supply (500,000,000 GLBX) based on their LDXG balance (5 GLBX per 1 LDXG).',
       whitepaperRef: 'GLBX Institutional Exchange & Orderbook Protocol',
+    },
+    goldProfitContribution: {
+      profitSource: 'High-Frequency Order Book Matching Fees & Cross-Border Clearing Margins',
+      mechanism: '25% of all institutional exchange trading fees and margin spreads continuously purchase physical bullion.',
+      annualEstUsd: '$78,400,000 USD',
+      quarterlyGoldGramsEst: '261,800g Fine Gold',
     },
     keyFeatures: [
       'Sub-millisecond trade execution via OMNEX parallel VM',
@@ -430,17 +488,130 @@ export const INITIAL_MAINNET_BLOCKS: OmnexBlock[] = [
 ];
 
 export const INITIAL_MAINNET_TXS: OmnexTransaction[] = [
+  { id: 'tx-gold-1', hash: '0x17c9...882a', from: '0xGLBX...PROFIT_SWEEP', to: '0xLDXG...GOLD_VAULT', action: 'GOLD_ACCUMULATION', tokens: '1,420g Fine Gold Acquired (GLBX 25% Profit)', amount: '$106,500 USD', timestamp: 'Just now', status: 'Confirmed', fee: '0.0001 OMNX' },
   { id: 'tx-1', hash: '0x9941...c82a', from: '0x32ff...54b2', to: '0xLDXG...VAULT', action: 'SWAP', tokens: '1,200 LDXG ➔ 10,434 BLC', amount: '$89,820 USD', timestamp: '3s ago', status: 'Confirmed', fee: '0.0003 OMNX' },
+  { id: 'tx-gold-2', hash: '0xbb22...44dd', from: '0xKSB...CLEARING_POOL', to: '0xLDXG...GOLD_VAULT', action: 'GOLD_ACCUMULATION', tokens: '2,800g Fine Gold Acquired (KSB 30% Spread)', amount: '$210,000 USD', timestamp: '5s ago', status: 'Confirmed', fee: '0.0001 OMNX' },
   { id: 'tx-2', hash: '0x12ad...fa33', from: '0xFlyS...POOL', to: '0x88cc...12ff', action: 'SETTLEMENT', tokens: '18,500 FLY ➔ 832.5 LDXG', amount: '$62,312 USD', timestamp: '7s ago', status: 'Confirmed', fee: '0.0002 OMNX' },
   { id: 'tx-3', hash: '0x442e...88bc', from: '0xFarm...099a', to: '0xMILK...CONTRACT', action: 'LIQUIDITY_ADD', tokens: '45,000 MILK + 1,710 LDXG', amount: '$255,600 USD', timestamp: '12s ago', status: 'Confirmed', fee: '0.0004 OMNX' },
+  { id: 'tx-gold-3', hash: '0xee91...33aa', from: '0xAISA...HEALTH_ORACLE', to: '0xLDXG...GOLD_VAULT', action: 'GOLD_ACCUMULATION', tokens: '980g Fine Gold Acquired (ASA 25% Profit)', amount: '$73,500 USD', timestamp: '15s ago', status: 'Confirmed', fee: '0.0001 OMNX' },
   { id: 'tx-4', hash: '0x8811...3355', from: '0xAI_A...NODE', to: '0xAISA...POOL', action: 'SWAP', tokens: '3,500 ASA ➔ 402.5 LDXG', amount: '$30,127 USD', timestamp: '18s ago', status: 'Confirmed', fee: '0.0002 OMNX' },
   { id: 'tx-5', hash: '0x66ff...aa12', from: '0xGLBX...CORE', to: '0xLDXT...ROUTER', action: 'GOLD_PEG_REBALANCE', tokens: '25,000 LDXG ➔ GLBX Reserve', amount: '$1,871,250 USD', timestamp: '24s ago', status: 'Confirmed', fee: '0.0006 OMNX' },
 ];
 
 export const TOKENOMICS_DISTRIBUTION = [
-  { name: 'Ecosystem Liquidity Pools (8 Projects)', percentage: 35, amount: '35,000,000 LDXG', color: '#f59e0b', desc: 'Direct automated market maker depth paired with FLY, MILK, MSZ, LDXT/LDXU, BLC, KSB, FSC, ASA.' },
-  { name: 'Physical Gold Reserve Collateral Vaults', percentage: 25, amount: '25,000,000 LDXG', color: '#eab308', desc: 'LBMA-certified fine bullion segregated custody in London and Zurich vaults.' },
+  { name: 'Ecosystem Liquidity Pools (8 Projects)', percentage: 35, amount: '35,000,000 LDXG', color: '#f59e0b', desc: 'Direct automated market maker depth paired with GLBX, BLC, KSB, FLY, FSC, MSA, MILK, and ASA.' },
+  { name: 'Physical Gold Reserve Collateral Vaults', percentage: 25, amount: '25,000,000 LDXG', color: '#eab308', desc: 'LBMA-certified fine bullion segregated custody in London and Zurich vaults, accumulating forever.' },
   { name: 'OMNEX Validator Staking & Security', percentage: 15, amount: '15,000,000 LDXG', color: '#10b981', desc: 'Consensus yield rewards and validator slash protection on OMNEX mainnet.' },
   { name: 'Enterprise Partner Onboarding Grants', percentage: 15, amount: '15,000,000 LDXG', color: '#38bdf8', desc: 'Strategic allocation for onboarding new industrial, aviation, and financial partners onto OMNEX.' },
   { name: 'Protocol Treasury & Governance', percentage: 10, amount: '10,000,000 LDXG', color: '#a855f7', desc: 'Community DAO governance, future research & emergency liquidity stabilization.' },
 ];
+
+export const PERPETUAL_GOLD_ACCUMULATION_DATA = {
+  title: 'Perpetual Gold Accumulation Protocol',
+  manifesto: 'LondonCoinGold is based on accumulating gold where profits from GLBX, BLC, KSB, FLY, FSC, MSA, MILK, and ASA are continuously converted into physical gold. The accumulated gold belongs to the holders of LDXG which will be accumulated forever.',
+  alliedProjects: ['GLBX', 'BLC', 'KSB', 'FLY', 'FSC', 'MSA', 'MILK', 'ASA'],
+  currentLiveMetrics: {
+    totalGoldVaultKg: 84120,
+    totalFineTroyOz: 2704530,
+    totalValuationUsd: 6340000000,
+    baseGoldPerLdxg: '1.00g',
+    currentGoldPerLdxg: '1.308g',
+    growthRateYearOverYear: '+14.8%',
+    totalAnnualProfitInflowUsd: 391200000,
+    totalAnnualGoldAcquiredKg: 5216,
+    activeAuditors: ['LBMA London Good Delivery', 'Malca-Amit Zurich High Security', 'Le Freeport Singapore'],
+    perpetualRule: 'Perpetually accumulated forever with 100% unencumbered holder legal ownership.'
+  },
+  revenueStreams: [
+    { 
+      id: 'glbx', 
+      name: 'GLBX Exchange', 
+      token: 'GLBX', 
+      contributionRate: '25% Net Profits', 
+      estAnnualUsd: '$78.4M USD', 
+      estAnnualGoldKg: '1,045 kg',
+      profitSource: 'High-frequency orderbook matching fees, cross-border clearing margins & institutional liquidity fees.' 
+    },
+    { 
+      id: 'blc', 
+      name: 'BitcoinLC (BLC)', 
+      token: 'BLC', 
+      contributionRate: '20% Net Profits', 
+      estAnnualUsd: '$38.2M USD', 
+      estAnnualGoldKg: '510 kg',
+      profitSource: 'PoUW distributed AI computing network task fees, zk-SNARK verification gas & enterprise model training.' 
+    },
+    { 
+      id: 'ksb', 
+      name: 'KeystoneBlue (KSB)', 
+      token: 'KSB', 
+      contributionRate: '30% Net Profits', 
+      estAnnualUsd: '$84.6M USD', 
+      estAnnualGoldKg: '1,128 kg',
+      profitSource: 'Serialized asset trading pool spreads, real estate and securities secondary trading fees & bank custody spreads.' 
+    },
+    { 
+      id: 'fly', 
+      name: 'FlySafe (FLY)', 
+      token: 'FLY', 
+      contributionRate: '20% Net Profits', 
+      estAnnualUsd: '$19.8M USD', 
+      estAnnualGoldKg: '264 kg',
+      profitSource: 'Autonomous travel booking commissions, parametric delay policy premiums & global airline reinsurance spreads.' 
+    },
+    { 
+      id: 'fsc', 
+      name: 'FirstSemiCon (FSC)', 
+      token: 'FSC', 
+      contributionRate: '25% Net Profits', 
+      estAnnualUsd: '$61.4M USD', 
+      estAnnualGoldKg: '818 kg',
+      profitSource: 'Free-space optical (FSO) interconnect hardware margin, NxM optical logic gate licensing & foundry royalties.' 
+    },
+    { 
+      id: 'msa', 
+      name: 'MeSocialize (MSA)', 
+      token: 'MSA', 
+      contributionRate: '20% Net Profits', 
+      estAnnualUsd: '$31.5M USD', 
+      estAnnualGoldKg: '420 kg',
+      profitSource: 'Photo-realistic AI avatar e-commerce, live commerce commission, creator tip gateways & Microsoft venture royalties.' 
+    },
+    { 
+      id: 'milk', 
+      name: 'FirstPure PureFerma (MILK)', 
+      token: 'MILK', 
+      contributionRate: '25% Net Profits', 
+      estAnnualUsd: '$24.5M USD', 
+      estAnnualGoldKg: '327 kg',
+      profitSource: 'Industrial precision fermentation reactor protein sales, FOB export delivery contracts & ESG carbon credits.' 
+    },
+    { 
+      id: 'asa', 
+      name: 'AISA Health Screening (ASA)', 
+      token: 'ASA', 
+      contributionRate: '25% Net Profits', 
+      estAnnualUsd: '$52.8M USD', 
+      estAnnualGoldKg: '704 kg',
+      profitSource: 'MEMS sensor array VOC breath biopsy cancer test kits, hospital SaaS subscriptions & clinical trial escrow.' 
+    },
+  ],
+  accumulationPillars: [
+    {
+      title: 'Automated Real-Time Revenue Sweep',
+      description: 'Smart contracts on the OMNEX Layer-1 automatically sweep 20-30% of gross profits from all 8 allied projects into the OMNEX Gold Acquisition Engine upon block settlement.',
+    },
+    {
+      title: 'Perpetual Bullion Purchases',
+      description: 'Treasury smart contracts convert all accumulated multi-chain profits into physical LBMA London Good Delivery 999.9 fine gold bars, deposited into insured vaults.',
+    },
+    {
+      title: '100% LDXG Holder Ownership',
+      description: 'The physical gold is never owned by founders or management; every gram is legally deeded and cryptographically linked to the collective holders of LDXG in direct proportion to their balance.',
+    },
+    {
+      title: 'Accumulated Forever (No Dilution)',
+      description: 'Because the accumulated gold is locked in reserve forever and continuous enterprise revenue adds new bullion indefinitely, the gold backing per 1 LDXG grows monotonically over time.',
+    },
+  ]
+};

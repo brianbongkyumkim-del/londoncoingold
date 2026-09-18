@@ -1,6 +1,6 @@
 {
   "name": "LondonCoinGold (LDXG) - OMNEX Mainnet",
-  "description": "Official ecosystem portal for LondonCoinGold (LDXG), the gold-backed liquidity and settlement token on the OMNEX Mainnet connecting global decentralized projects.",
+  "description": "LondonCoinGold is based on accumulating gold where profits from GLBX, BLC, KSB, FLY, FSC, MSA, MILK, and ASA belong to the holders of LDXG and will be accumulated forever.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

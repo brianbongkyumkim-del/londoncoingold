@@ -83,7 +83,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
               </div>
 
               {/* 10% LDXG Holder Golden Banner */}
-              <div className="mb-4 px-3 py-2 rounded-xl bg-gradient-to-r from-amber-500/15 via-yellow-500/10 to-amber-500/15 border border-amber-500/30 flex items-center justify-between text-xs font-mono">
+              <div className="mb-2 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500/15 via-yellow-500/10 to-amber-500/15 border border-amber-500/30 flex items-center justify-between text-xs font-mono">
                 <div className="flex items-center gap-1.5 text-amber-300 font-bold text-[11px]">
                   <Coins className="w-3.5 h-3.5 text-amber-400" />
                   <span>10% LDXG POOL:</span>
@@ -92,6 +92,19 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
                   {project.tenPercentAllocation.totalAllocatedTokens}
                 </span>
               </div>
+
+              {/* Perpetual Gold Feeder Banner */}
+              {project.goldProfitContribution && (
+                <div className="mb-4 px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-950/40 via-amber-950/40 to-slate-900 border border-emerald-500/30 flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-1.5 text-amber-200 text-[10px] font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                    <span>GOLD FEEDER:</span>
+                  </div>
+                  <span className="text-amber-300 font-bold text-[10px]">
+                    {project.goldProfitContribution.annualEstUsd} / yr
+                  </span>
+                </div>
+              )}
 
               {/* Title & Tagline */}
               <div className="mb-4">

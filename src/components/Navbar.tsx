@@ -67,12 +67,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="text-emerald-400 text-[10px] ml-0.5">+3.4%</span>
             </span>
             <span className="text-slate-600">|</span>
-            <span className="text-slate-400 hidden lg:inline">
-              Reserve Peg: <strong className="text-amber-200">1.00g Fine Gold (LBMA)</strong>
+            <span className="text-amber-200 hidden lg:inline font-semibold">
+              Perpetual Gold Backing: <strong className="text-white">1.308g/LDXG</strong> (Accumulated Forever)
             </span>
             <span className="text-slate-600 hidden lg:inline">|</span>
             <span className="text-slate-400 hidden xl:inline">
-              Total Backing: <strong className="text-slate-200">{OMNEX_NETWORK_INFO.totalReserveValueUsd}</strong>
+              Vaulted: <strong className="text-slate-200">84,120 kg ($6.34B USD)</strong>
             </span>
           </div>
         </div>
@@ -106,11 +106,18 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Desktop Nav Items */}
         <nav className="hidden lg:flex items-center gap-1 font-medium text-sm text-slate-300">
           <a 
-            href="#ten-percent-ownership" 
-            className="px-3.5 py-1.5 rounded-lg text-amber-300 bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20 transition-colors flex items-center gap-1.5 font-bold"
+            href="#perpetual-gold" 
+            className="px-3 py-1.5 rounded-lg text-amber-300 bg-amber-500/20 border border-amber-500/50 hover:bg-amber-500/30 transition-all flex items-center gap-1.5 font-bold shadow-sm shadow-amber-500/20"
           >
             <Coins className="w-3.5 h-3.5 text-amber-400" />
-            <span>10% Coin Ownership</span>
+            <span>Perpetual Gold Engine</span>
+          </a>
+          <a 
+            href="#ten-percent-ownership" 
+            className="px-3 py-1.5 rounded-lg text-slate-200 hover:text-amber-300 hover:bg-white/5 transition-colors flex items-center gap-1"
+          >
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span>10% Ownership</span>
           </a>
           <a 
             href="#network-diagram" 
@@ -129,13 +136,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             href="#projects" 
             className="px-3 py-2 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-colors"
           >
-            Allied Projects (9)
+            8 Allied Projects
           </a>
           <a 
             href="#liquidity-bridge" 
             className="px-3 py-2 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-colors"
           >
-            Liquidity Bridge
+            Bridge & Swap
           </a>
           <a 
             href="#tokenomics" 
@@ -260,11 +267,19 @@ export const Navbar: React.FC<NavbarProps> = ({
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#0a0e17] border-b border-amber-500/20 px-4 py-4 space-y-2 text-sm font-medium">
           <a 
-            href="#ten-percent-ownership" 
+            href="#perpetual-gold" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-amber-300 font-bold flex items-center gap-2"
+            className="block py-2 text-amber-300 font-bold flex items-center gap-2 bg-amber-500/10 px-3 rounded-lg border border-amber-500/30"
           >
             <Coins className="w-4 h-4 text-amber-400" />
+            <span>Perpetual Gold Engine</span>
+          </a>
+          <a 
+            href="#ten-percent-ownership" 
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-slate-200 hover:text-amber-300 flex items-center gap-2 px-3"
+          >
+            <ShieldCheck className="w-4 h-4 text-amber-400" />
             <span>10% Coin Ownership Protocol</span>
           </a>
           <a 

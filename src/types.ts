@@ -44,6 +44,12 @@ export interface EcosystemProject {
     entitlementClause: string;
     whitepaperRef: string;
   };
+  goldProfitContribution?: {
+    profitSource: string;
+    mechanism: string;
+    annualEstUsd: string;
+    quarterlyGoldGramsEst: string;
+  };
   keyFeatures: string[];
   auditStatus: string;
   website: string;
@@ -64,7 +70,7 @@ export interface OmnexTransaction {
   hash: string;
   from: string;
   to: string;
-  action: 'SWAP' | 'LIQUIDITY_ADD' | 'SETTLEMENT' | 'GOLD_PEG_REBALANCE' | 'STAKE';
+  action: 'SWAP' | 'LIQUIDITY_ADD' | 'SETTLEMENT' | 'GOLD_PEG_REBALANCE' | 'STAKE' | 'GOLD_ACCUMULATION';
   tokens: string;
   amount: string;
   timestamp: string;

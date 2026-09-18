@@ -85,6 +85,39 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           </p>
         </div>
 
+        {/* Perpetual Gold Profit Contribution Card */}
+        {project.goldProfitContribution && (
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-950/50 via-[#161f32] to-amber-950/40 border border-amber-500/50 mb-6 shadow-lg shadow-amber-500/10">
+            <div className="flex items-center justify-between gap-2 mb-3">
+              <div className="flex items-center gap-2 text-xs font-mono text-amber-300 font-bold">
+                <Coins className="w-4 h-4 text-amber-400" />
+                <span>PERPETUAL GOLD PROFIT CONTRIBUTION</span>
+              </div>
+              <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold">
+                ACCUMULATED FOREVER
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 rounded-xl bg-black/40 border border-white/5 mb-3 text-xs font-mono">
+              <div>
+                <span className="text-slate-400 text-[10px] block">EST. ANNUAL PROFIT INFLOW</span>
+                <span className="text-base font-bold text-emerald-400">{project.goldProfitContribution.annualEstUsd}</span>
+              </div>
+              <div>
+                <span className="text-slate-400 text-[10px] block">QUARTERLY GOLD PURCHASES</span>
+                <span className="text-base font-bold text-amber-300">{project.goldProfitContribution.quarterlyGoldGramsEst}</span>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-200 leading-relaxed mb-1 font-normal">
+              <strong className="text-amber-300">Revenue Stream: </strong>{project.goldProfitContribution.profitSource}
+            </p>
+            <p className="text-xs text-slate-300 leading-relaxed font-normal">
+              <strong className="text-white">Mechanism: </strong>{project.goldProfitContribution.mechanism}
+            </p>
+          </div>
+        )}
+
         {/* 10% LDXG Allocation Clause Card */}
         <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-950/40 via-[#131b2c] to-amber-950/30 border border-amber-500/40 mb-6">
           <div className="flex items-center justify-between gap-2 mb-3">

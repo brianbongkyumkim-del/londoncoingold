@@ -62,6 +62,7 @@ export const ProjectBadge: React.FC<ProjectBadgeProps> = ({
         </div>
       );
 
+    case 'fly':
     case 'flysafe':
       return (
         <div className={`inline-flex items-center rounded-xl overflow-hidden shadow-lg border transition-all duration-300 font-semibold tracking-wide ${basePadding} ${highlighted ? 'ring-2 ring-blue-400 shadow-blue-500/30' : 'border-blue-400/30'} ${className}`}>
@@ -86,6 +87,7 @@ export const ProjectBadge: React.FC<ProjectBadgeProps> = ({
         </div>
       );
 
+    case 'msa':
     case 'mesocialize':
       return (
         <div className={`inline-flex items-center rounded-xl overflow-hidden shadow-lg border transition-all duration-300 font-semibold tracking-wide ${basePadding} ${highlighted ? 'ring-2 ring-amber-400 shadow-amber-500/30' : 'border-amber-400/40'} ${className}`}>
@@ -95,11 +97,12 @@ export const ProjectBadge: React.FC<ProjectBadgeProps> = ({
             </span>
           </div>
           <div className={`h-full flex items-center justify-center bg-[#ffea00] text-[#111827] font-black ${rightWidth}`}>
-            <span>MSZ</span>
+            <span>MSA</span>
           </div>
         </div>
       );
 
+    case 'milk':
     case 'firstpure':
       return (
         <div className={`inline-flex items-center rounded-xl overflow-hidden shadow-lg border transition-all duration-300 font-semibold tracking-wide ${basePadding} ${highlighted ? 'ring-2 ring-emerald-400 shadow-emerald-500/30' : 'border-emerald-500/30'} ${className}`}>
@@ -113,6 +116,7 @@ export const ProjectBadge: React.FC<ProjectBadgeProps> = ({
         </div>
       );
 
+    case 'asa':
     case 'aisa':
       return (
         <div className={`inline-flex items-center rounded-xl overflow-hidden shadow-lg border transition-all duration-300 font-semibold tracking-wide ${basePadding} ${highlighted ? 'ring-2 ring-sky-400 shadow-sky-500/30' : 'border-sky-500/30'} ${className}`}>
