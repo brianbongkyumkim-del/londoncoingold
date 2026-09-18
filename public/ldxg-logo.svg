@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Background disc gradient -->
+    <radialGradient id="ldxgBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#232528" />
+      <stop offset="85%" stop-color="#18191b" />
+      <stop offset="100%" stop-color="#121315" />
+    </radialGradient>
+
+    <!-- Outer 'C' ring metallic gradient -->
+    <linearGradient id="ldxgRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faecc2" />
+      <stop offset="25%" stop-color="#eecb82" />
+      <stop offset="55%" stop-color="#d49a37" />
+      <stop offset="85%" stop-color="#ba7a19" />
+      <stop offset="100%" stop-color="#9a5e0b" />
+    </linearGradient>
+
+    <!-- Inner 'L' glyph metallic gradient -->
+    <linearGradient id="ldxgLGrad" x1="15%" y1="10%" x2="90%" y2="95%">
+      <stop offset="0%" stop-color="#fdf2d0" />
+      <stop offset="30%" stop-color="#ebd08e" />
+      <stop offset="70%" stop-color="#cca04c" />
+      <stop offset="100%" stop-color="#ab6d14" />
+    </linearGradient>
+
+    <!-- 3D Gold Sphere radial gradient -->
+    <radialGradient id="ldxgSphereGrad" cx="35%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="18%" stop-color="#faecc2" />
+      <stop offset="45%" stop-color="#e4be6b" />
+      <stop offset="75%" stop-color="#b87b1c" />
+      <stop offset="100%" stop-color="#7a4604" />
+    </radialGradient>
+
+    <!-- Subtle drop shadow filter for 3D depth -->
+    <filter id="ldxgShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Base Dark Circular Coin Background -->
+  <circle cx="100" cy="100" r="98" fill="url(#ldxgBg)" />
+
+  <!-- Outer 'C' Shaped Golden Ring with Rounded Terminals -->
+  <!-- Center: 100,100; Radius: 69; StrokeWidth: 22 -->
+  <!-- Starts at angle +32° (bottom right), curves clockwise past bottom, left, top to angle -32° (top right) -->
+  <path
+    d="M 158.5 136.5 A 69 69 0 1 1 158.5 63.5"
+    fill="none"
+    stroke="url(#ldxgRingGrad)"
+    stroke-width="22"
+    stroke-linecap="round"
+  />
+
+  <!-- Inner Monogram 'L' with exact geometric proportions -->
+  <path
+    d="M 68 61 
+       L 94 61 
+       L 94 112 
+       L 132 112 
+       L 132 138 
+       L 68 138 
+       Z"
+    fill="url(#ldxgLGrad)"
+  />
+
+  <!-- 3D Gold Shaded Sphere seated in the elbow of the 'L' -->
+  <circle
+    cx="119"
+    cy="113"
+    r="13"
+    fill="url(#ldxgSphereGrad)"
+    filter="url(#ldxgShadow)"
+  />
+</svg>

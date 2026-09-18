@@ -1,0 +1,6 @@
+{
+  "name": "LondonCoinGold (LDXG) - OMNEX Mainnet",
+  "description": "Official ecosystem portal for LondonCoinGold (LDXG), the gold-backed liquidity and settlement token on the OMNEX Mainnet connecting global decentralized projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
